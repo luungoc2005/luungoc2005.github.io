@@ -2,9 +2,18 @@ const path = require('path');
 
 module.exports = {
   siteMetadata: {
-    title: 'Ueno Gatsby Starter',
+    title: 'Ngoc Nguyen\'s Personal Blog',
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        // The property ID; the tracking code won't be generated without it
+        trackingId: "UA-87659525-1",
+        // Defines where to place the tracking script - `true` in the head and `false` in the body
+        head: false,
+      }
+    },
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-typescript',
     'gatsby-plugin-sharp',
