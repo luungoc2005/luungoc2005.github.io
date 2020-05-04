@@ -36,14 +36,15 @@ export default ({ children }: AppLayoutProps) => (
     {children}
 
     <Footer
-      logo={<Logo />}
+      // logo={<Logo />}
+      logo={<></>}
       social={[
-        { icon: <Dribbble />, to: 'https://dribbble.com/ueno' },
-        { icon: <Twitter />, to: 'https://twitter.com/uenodotco' },
-        { icon: <Github />, to: 'https://github.com/ueno-llc' },
-        { icon: <Instagram />, to: 'https://www.instagram.com/uenodotco' },
-        { icon: <Facebook />, to: 'https://www.facebook.com/uenodotco' },
-        { icon: <Linkedin />, to: 'https://www.linkedin.com/company/ueno' },
+        // { icon: <Dribbble />, to: 'https://dribbble.com/ueno' },
+        { icon: <Twitter />, to: 'https://twitter.com/luungoc2005' },
+        { icon: <Github />, to: 'https://github.com/luungoc2005' },
+        // { icon: <Instagram />, to: 'https://www.instagram.com/luungoc2005' },
+        { icon: <Facebook />, to: 'https://www.facebook.com/luungoc2005' },
+        { icon: <Linkedin />, to: 'https://www.linkedin.com/in/luungoc2005/' },
       ]}
     />
 

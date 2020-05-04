@@ -15,6 +15,9 @@
   }
 
   &__logo {
+    text-decoration: none;
+    color: #333;
+
     &Svg {
       display: block;
 
@@ -23,6 +26,24 @@
 
       @media (min-width: $min-768) {
         height: 18px;
+      }
+    }
+
+    & h1 {
+      display: block;
+      font-weight: 600;
+      font-size: x-large;
+
+      @media (min-width: $min-768) {
+        display: inline-block;
+      }
+    }
+
+    & span {
+      color: #666;
+
+      @media (min-width: $min-768) {
+        padding-left: 8px;
       }
     }
   }

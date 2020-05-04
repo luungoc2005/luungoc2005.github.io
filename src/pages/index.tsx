@@ -11,23 +11,29 @@ export default () => (
     <Helmet title="Home" />
 
     <Intro>
-      Opinionated starter by Ueno, using opinionated dependencies 🤪,{' '}
-      <Highlight>TypeScript</Highlight>,&nbsp;
-      <Highlight>SCSS</Highlight>, <Highlight>CSS Modules</Highlight>,{' '}
-      <Highlight>React Hooks</Highlight>,&nbsp;
-      <Highlight>root resolver</Highlight>, <Highlight>code splitting</Highlight> and a lot of love.
+      Software Developer. Coffee Addict ☕️.<br/>I do{' '}
+      <Highlight>Python</Highlight>,{' '}
+      <Highlight>Javascript</Highlight>,{' '}
+      <Highlight>.NET</Highlight>,{' '}
+      <Highlight>Mobile</Highlight>, and <Highlight>AI</Highlight> stuffs.
     </Intro>
 
     <BlockText
-      heading="Who we are"
+      heading="About me"
       description={
         <>
-          Ueno is a full-service agency, busy designing and building beautiful digital products,
-          brands, and experiences. For more informations go to{' '}
-          <a href="https://ueno.co" target="_blank" rel="noopener noreferrer">
-            ueno.co
-          </a>
-          .
+          <div style={{ fontWeight: 'bold', paddingBottom: 8 }}>
+            Currently open for freelance!
+          </div>
+          <p>
+            Currently employed at{' '}
+            <a href="https://2359media.com" target="_blank" rel="noopener noreferrer">
+              2359 Media
+            </a>{' '}
+            as a full-time Software Developer. 
+            I build high quality, maintainable and user-friendly digital products.
+            I also do AI from experiments to production, with a strong focus on Natural Language Processing (NLP).
+          </p>
         </>
       }
     />
