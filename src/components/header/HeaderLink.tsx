@@ -2,6 +2,8 @@ import React, { ReactNode } from 'react';
 
 import { Link } from 'components/link/Link';
 
+import { OutboundLink } from "gatsby-plugin-google-analytics"
+
 import s from './HeaderLink.scss';
 
 interface HeaderLinkProps {
@@ -23,9 +25,9 @@ export const HeaderLink = ({ name, to, icon }: HeaderLinkProps) => {
 
   if (isExternal) {
     return (
-      <a className={s.link} target="_blank" rel="noopener noreferrer" href={to}>
+      <OutboundLink className={s.link} target="_blank" rel="noopener noreferrer" href={to}>
         {content()}
-      </a>
+      </OutboundLink>
     );
   }
 

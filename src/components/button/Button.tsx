@@ -2,6 +2,8 @@ import React, { ReactNode } from 'react';
 
 import { Link } from 'components/link/Link';
 
+import { OutboundLink } from "gatsby-plugin-google-analytics";
+
 import s from './Button.scss';
 
 interface ButtonProps {
@@ -16,9 +18,9 @@ export const Button = ({ children, href, onClick }: ButtonProps) => {
 
   if (isExternal) {
     return (
-      <a className={s.button} target="_blank" rel="noopener noreferrer" href={href}>
+      <OutboundLink className={s.button} target="_blank" rel="noopener noreferrer" href={href}>
         {children}
-      </a>
+      </OutboundLink>
     );
   }
 

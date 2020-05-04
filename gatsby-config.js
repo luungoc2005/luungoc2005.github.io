@@ -12,6 +12,7 @@ module.exports = {
         trackingId: "UA-87659525-1",
         // Defines where to place the tracking script - `true` in the head and `false` in the body
         head: false,
+        respectDNT: true,
       }
     },
     'gatsby-plugin-react-helmet',

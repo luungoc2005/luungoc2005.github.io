@@ -1,11 +1,11 @@
 import React, { ReactNode } from 'react';
 import { Helmet } from 'react-helmet';
 
-import Logo from '../../assets/svg/ueno-logo.svg';
-import Dribbble from '../../assets/svg/dribbble.svg';
+// import Logo from '../../assets/svg/ueno-logo.svg';
+// import Dribbble from '../../assets/svg/dribbble.svg';
 import Twitter from '../../assets/svg/twitter.svg';
 import Github from '../../assets/svg/github.svg';
-import Instagram from '../../assets/svg/instagram.svg';
+// import Instagram from '../../assets/svg/instagram.svg';
 import Facebook from '../../assets/svg/facebook.svg';
 import Linkedin from '../../assets/svg/linkedin.svg';
 

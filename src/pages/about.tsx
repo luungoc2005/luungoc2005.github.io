@@ -4,6 +4,8 @@ import { Helmet } from 'react-helmet';
 import { Intro } from 'components/intro/Intro';
 import { BlockText } from 'components/block-text/BlockText';
 
+import { OutboundLink } from "gatsby-plugin-google-analytics";
+
 // tslint:disable no-default-export
 export default () => (
   <>
@@ -18,8 +20,8 @@ export default () => (
 
         <p>
           I am still in the process of building this personal site, but if you are up for a chat, hit me at{' '}
-          <a href="mailto:luungoc2005@gmail.com">luungoc2005@gmail.com</a>{' '}
-          or{' '}<a href="https://twitter.com/luungoc2005">@luungoc2005</a>{' '}
+          <OutboundLink href="mailto:luungoc2005@gmail.com">luungoc2005@gmail.com</OutboundLink>{' '}
+          or{' '}<OutboundLink href="https://twitter.com/luungoc2005">@luungoc2005</OutboundLink>{' '}
           (although I don't frequent Twitter as much).
         </p>
 

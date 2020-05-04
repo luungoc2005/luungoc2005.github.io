@@ -2,6 +2,8 @@ import React, { ReactNode } from 'react';
 
 import { Container } from 'components/container/Container';
 
+import { OutboundLink } from "gatsby-plugin-google-analytics"
+
 import s from './Footer.scss';
 
 interface Social {
@@ -25,9 +27,9 @@ export const Footer = ({ logo, social }: FooterProps) => (
         <ul className={s.footer__list}>
           {social.map((item) => (
             <li key={item.to} className={s.footer__item}>
-              <a href={item.to} target="_blank" rel="noopener noreferrer">
+              <OutboundLink href={item.to} target="_blank" rel="noopener noreferrer">
                 {item.icon}
-              </a>
+              </OutboundLink>
             </li>
           ))}
         </ul>
