@@ -38,7 +38,7 @@ export default ({ children }: AppLayoutProps) => (
     <Helmet {...helmet} />
 
     <Header>
-      {/* <HeaderLink name="blog" to="/blog" /> */}
+      <HeaderLink name="blog" to="/blog" />
       <HeaderLink name="about" to="/about" />
       <HeaderLink name="github" to="https://github.com/luungoc2005" icon={<Github />} />
     </Header>

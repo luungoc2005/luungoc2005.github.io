@@ -1,10 +1,27 @@
 @import '~styles/config';
+@import '~styles/variables';
 
 .about_col {
   padding: 60px 0;
+  transition: 200ms opacity ease-in-out;
+  opacity: .7;
+
+  &:hover {
+    opacity: 1;
+  }
 
   @media (min-width: $min-768) {
     padding: 120px 0;
+  }
+
+  &__avatar {
+    img {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      padding: 5px;
+      border: 1px solid #f2f3f3;
+    }
   }
 
   &__heading {
@@ -24,17 +41,17 @@
   }
 
   &__details {
-    line-height: (26 / 16);
+    line-height: (32 / 16);
     user-select: none;
 
     &__icon {
       display: inline-block;
-      width: 24px;
+      width: 28px;
     }
 
-    a {
-      text-decoration: none;
-      color: inherit;
+    &__text {
+      padding: 8px 0;
+      font-weight: 400;
     }
   }
 }

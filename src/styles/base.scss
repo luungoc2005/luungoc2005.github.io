@@ -90,3 +90,16 @@ select {
     color: $color-placeholder;
   }
 }
+
+a { // stylelint-disable-line
+  color: lighten(#000, 10%);
+  font-weight: 400;
+
+  text-decoration: none;
+
+  transition: 200ms opacity ease-in-out;
+
+  &:hover { // stylelint-disable-line
+    opacity: 0.5;
+  }
+}
