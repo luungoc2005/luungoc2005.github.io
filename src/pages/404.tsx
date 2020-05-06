@@ -6,7 +6,7 @@ import { Segment } from 'components/segment/Segment';
 // tslint:disable no-default-export
 export default () => (
   <>
-    <Helmet title="404 Not Found" />
+    <Helmet title="404 Not Found - Ngoc Nguyen's Personal Blog" />
 
     <Segment>
       <h1>Page was not found</h1>

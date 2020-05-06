@@ -17,12 +17,57 @@ module.exports = {
     },
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-typescript',
+    'gatsby-plugin-twitter',
+    {
+      resolve: 'gatsby-transformer-remark',
+      options: {
+        plugins: [{
+          resolve: `gatsby-remark-vscode`,
+          options: {
+            theme: 'Solarized Light', // Or install your favorite theme from GitHub
+            inlineCode: {
+              marker: '•'
+            }
+          }
+        }]
+      }
+    },
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              // It's important to specify the maxWidth (in pixels) of
+              // the content container as this plugin uses this as the
+              // base for generating different widths of each image.
+              maxWidth: 590,
+            },
+          },
+        ],
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/src/posts`,
+        name: 'posts',
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/src/assets`,
+        name: 'assets',
+      },
+    },
+    {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'ueno-gatsby-starter',
+        name: 'luungoc2005.github.io',
         short_name: 'starter',
         start_url: '/',
         background_color: '#663399',

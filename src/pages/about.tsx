@@ -9,7 +9,7 @@ import { OutboundLink } from "gatsby-plugin-google-analytics";
 // tslint:disable no-default-export
 export default () => (
   <>
-    <Helmet title="About" />
+    <Helmet title="About - Ngoc Nguyen's Personal Blog" />
 
     <Intro>About me</Intro>
 

@@ -10,7 +10,7 @@ import { OutboundLink } from "gatsby-plugin-google-analytics"
 // tslint:disable no-default-export
 export default () => (
   <>
-    <Helmet title="Home" />
+    <Helmet title="Home - Ngoc Nguyen's Personal Blog" />
 
     <Intro>
       Software Developer. Coffee Addict ☕️.<br/>I do{' '}
@@ -24,9 +24,9 @@ export default () => (
       heading="About me"
       description={
         <>
-          <div style={{ fontWeight: 'bold', paddingBottom: 8 }}>
-            Currently open for freelance!
-          </div>
+          <p style={{ fontWeight: 'bold' }}>
+            I am open for freelancing!
+          </p>
           <p>
             Currently employed at{' '}
             <OutboundLink href="https://2359media.com" target="_blank" rel="noopener noreferrer">

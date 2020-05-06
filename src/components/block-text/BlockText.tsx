@@ -16,7 +16,7 @@ export const BlockText = ({ heading, description }: BlockTextProps) => (
       <Row>
         <div className={s.block__col}>
           <h3 className={s.block__heading}>{heading}</h3>
-          <p className={s.block__description}>{description}</p>
+          <div className={s.block__description}>{description}</div>
         </div>
       </Row>
     </div>

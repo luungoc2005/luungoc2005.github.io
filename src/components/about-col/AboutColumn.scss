@@ -1,0 +1,40 @@
+@import '~styles/config';
+
+.about_col {
+  padding: 60px 0;
+
+  @media (min-width: $min-768) {
+    padding: 120px 0;
+  }
+
+  &__heading {
+    @include rf(22, 26);
+
+    margin-bottom: 12px;
+    font-family: $font-heading;
+    font-weight: 300;
+  }
+
+  &__description {
+    // @include rf(16, 18);
+
+    margin-bottom: 18px;
+    line-height: (26 / 16);
+    font-style: italic;
+  }
+
+  &__details {
+    line-height: (26 / 16);
+    user-select: none;
+
+    &__icon {
+      display: inline-block;
+      width: 24px;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+}
