@@ -1,10 +1,9 @@
 import React from 'react';
 
 import { graphql } from 'gatsby'
-import { Helmet } from 'react-helmet';
-import { PageHeader } from 'components/page-header/PageHeader';
-import { AboutColumn } from 'components/about-col/AboutColumn';
-import { socialItems } from 'components/app-layout/AppLayout';
+import { PostsLayout } from 'components/posts-layout/PostsLayout'
+import { PageHeader } from 'components/page-header/PageHeader'
+import { PostBrief } from 'components/post-brief/PostBrief'
 
 export interface BlogNode {
   node: {
@@ -27,32 +26,22 @@ export interface BlogPageProps {
 // tslint:disable no-default-export
 export const BlogPage = ({ data }: BlogPageProps) => {
   return (
-  <>
+  <PostsLayout>
 
-    <Helmet title="Posts - Ngoc Nguyen's Personal Blog" />
+      <header>
+        <PageHeader>Blog Posts</PageHeader>
+      </header>
 
-    <div className="container row" style={{ 
-        marginLeft: 'auto', 
-        marginRight: 'auto' 
-      }}>
-      <aside className="col-xs-3">
-        <AboutColumn social={socialItems} />
-      </aside>
-      <section className="col-xs-9">
-        <header>
-          <PageHeader>Blog Posts</PageHeader>
-        </header>
+      {data.allMarkdownRemark.edges.map((edge, edge_ix) => 
+        <PostBrief 
+          key={edge_ix} 
+          title={edge.node.frontmatter.title}
+        >
+          <div dangerouslySetInnerHTML={{ __html: edge.node.snippet }} />
+        </PostBrief>
+      )}
 
-        {data.allMarkdownRemark.edges.map((edge, edge_ix) => 
-          <article key={edge_ix}>
-            <header>{edge.node.frontmatter.title}</header>
-            <div dangerouslySetInnerHTML={{ __html: edge.node.snippet }} />
-          </article>
-        )}
-      </section>
-    </div>
-
-  </>
+  </PostsLayout>
 )};
 
 export const query = graphql`

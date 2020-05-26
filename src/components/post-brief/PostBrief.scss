@@ -1,0 +1,37 @@
+@import '~styles/config';
+
+.post_brief {
+  border: 1px solid #e6e6e6;
+  box-shadow: 0 10px 10px 0 rgba(50, 128, 122, 0.2);
+  border-radius: 5px;
+  padding: 24px;
+  margin: 12px;
+  opacity: .8;
+  transition: 200ms opacity ease-in-out;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &::after { // clearfix
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  header {
+    font-family: $font-heading;
+    font-weight: 300;
+  }
+
+  &__content {
+    margin: 12px 0;
+    font-family: $font-family;
+  }
+
+  &__back_top {
+    float: right;
+    text-transform: uppercase;
+    font-size: 0.8em;
+  }
+}

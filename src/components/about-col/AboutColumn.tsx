@@ -13,15 +13,17 @@ interface AboutColumnProps {
 }
 
 export const AboutColumn = ({ social }: AboutColumnProps) => (
-  <div className={s.about_col}>
-    <div className={s.about_col__avatar}>
+  <div className={`row ${s.about_col}`}>
+    <div className={`col-3 col-sm-12 ${s.about_col__avatar}`}>
       <img alt="Avatar" src={Avatar} />
     </div>
-    <div className={s.about_col__heading}>
-      Ngoc Nguyen
-    </div>
-    <div className={s.about_col__description}>
-      Software Developer, AI Enthusiast, Coffee Addict, plays Piano
+    <div className={`col-9 col-sm-12 ${s.about_col__desc_container}`}>
+      <div className={s.about_col__heading}>
+        Ngoc Nguyen
+      </div>
+      <div className={s.about_col__description}>
+        Software Developer, AI Enthusiast, Coffee Addict, plays Piano
+      </div>
     </div>
     <div className={s.about_col__details}>
       <ul>
