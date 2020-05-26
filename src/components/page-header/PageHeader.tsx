@@ -3,7 +3,7 @@ import React, { ReactNode } from 'react';
 import s from './PageHeader.scss';
 
 interface PageHeaderProps {
-  children: ReactNode;
+  children?: ReactNode;
 }
 
 export const PageHeader = ({ children }: PageHeaderProps) => (

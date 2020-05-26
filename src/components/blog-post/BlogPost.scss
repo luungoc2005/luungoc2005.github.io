@@ -1,0 +1,28 @@
+@import '~styles/config';
+
+.post_meta {
+  margin-top: 36px;
+
+  span {
+    svg {
+      width: .8em;
+      margin-right: 12px;
+    }
+
+    font-weight: 300;
+  }
+}
+
+.post_content {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  
+  @include rf(16, 18);
+
+  font-weight: 300;
+  line-height: (26 / 16);
+
+  padding-bottom: 20px;
+
+  border-bottom: 1px solid #e5e5e5;
+}

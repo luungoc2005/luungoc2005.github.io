@@ -1,0 +1,11 @@
+@import '~styles/config';
+
+.published_year {
+  @include rf(18, 24);
+  
+  margin: 24px 12px 18px 12px;
+  padding: 0px 24px;
+
+  font-family: $font-heading;
+  font-weight: 300;
+}

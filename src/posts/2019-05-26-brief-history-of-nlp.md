@@ -1,6 +1,6 @@
 ---
 title: A history of progress on text representation in NLP
-date: 2019-05-25
+date: 2019-05-26
 tags: [ai]
 published: false
 ---

@@ -17,11 +17,11 @@ export const PostsLayout = ({
   title = "Posts - Ngoc Nguyen's Personal Blog"
 }: PostsLayoutProps) => {
   return (
-  <>
+  <div className={s.layout}>
 
     <Helmet title={title} />
 
-    <div className="container row" style={{ 
+      <div className="container row" style={{ 
         marginLeft: 'auto', 
         marginRight: 'auto' 
       }}>
@@ -35,5 +35,5 @@ export const PostsLayout = ({
       </section>
     </div>
 
-  </>
+  </div>
 )};
