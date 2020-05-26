@@ -1,1 +1,1 @@
-{"componentChunkName":"component---src-pages-blog-tsx","path":"/blog/","result":{"pageContext":{}}}
+{"componentChunkName":"component---src-pages-blog-tsx","path":"/blog/","result":{"data":{"allMarkdownRemark":{"edges":[{"node":{"snippet":"<div class=\"custom-block-body\"><p>Stay tuned for more updates, and have a nice day!</p></div>","frontmatter":{"title":"Hello World","date":"2019-05-25T00:00:00.000Z"}}}]}},"pageContext":{}}}
