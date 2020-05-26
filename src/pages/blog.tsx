@@ -8,6 +8,11 @@ import { PostBrief } from 'components/post-brief/PostBrief'
 export interface BlogNode {
   node: {
     snippet: string
+    fields: {
+      readingTime: {
+        text: string  
+      }
+    }
     frontmatter: {
       title: string
       date: string
@@ -36,6 +41,7 @@ export const BlogPage = ({ data }: BlogPageProps) => {
         <PostBrief 
           key={edge_ix} 
           title={edge.node.frontmatter.title}
+          readingTime={edge.node.fields.readingTime.text}
         >
           <div dangerouslySetInnerHTML={{ __html: edge.node.snippet }} />
         </PostBrief>
@@ -60,6 +66,11 @@ query PostsQuery {
         frontmatter {
           title
           date
+        }
+        fields {
+          readingTime {
+            text
+          }
         }
       }
     }
