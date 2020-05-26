@@ -32,17 +32,20 @@
     & h1 {
       display: block;
       font-weight: 600;
-      font-size: x-large;
+      font-size: initial;
 
       @media (min-width: $min-768) {
         display: inline-block;
+        font-size: large;
       }
     }
 
     & span {
       color: #666;
+      display: none;
 
       @media (min-width: $min-768) {
+        display: initial;
         padding-left: 8px;
       }
     }

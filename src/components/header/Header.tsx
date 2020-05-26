@@ -17,7 +17,7 @@ export const Header = ({ children }: HeaderProps) => (
         <Link to="/" className={s.header__logo}>
           {/* <StarterLogo className={s.header__logoSvg} /> */}
           <h1>Ngoc Nguyen</h1>
-          <span>@Singapore</span>
+          <span>~ programming and stuffs</span>
         </Link>
 
         <div className={s.header__navigation}>{children}</div>
