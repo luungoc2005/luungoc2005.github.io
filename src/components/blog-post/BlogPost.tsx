@@ -10,6 +10,8 @@ import _format from 'date-fns/format'
 
 import s from './BlogPost.scss'
 
+const SITE_ROOT = "https://luungoc2005.github.io/"
+
 export interface BlogPostProps {
   data: {
     markdownRemark: {
@@ -53,14 +55,16 @@ export const BlogPost = ({ data }: BlogPostProps) => {
       dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} 
     />
 
-    <DiscussionEmbed
-      shortname="luungoc2005"
-      config={{
-        url: window.location.href,
-        identifier: data.markdownRemark.fields.slug,
-        title: data.markdownRemark.frontmatter.title,
-      }}
-    />
+    <section className={s.post_disqus}>
+      <DiscussionEmbed
+        shortname="luungoc2005"
+        config={{
+          url: `${SITE_ROOT}${data.markdownRemark.fields.slug}`,
+          identifier: data.markdownRemark.fields.slug,
+          title: data.markdownRemark.frontmatter.title,
+        }}
+      />
+    </section>
   </PostsLayout>
 )};
 
