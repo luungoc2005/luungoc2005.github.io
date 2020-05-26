@@ -26,11 +26,11 @@ export const PostsLayout = ({
         marginRight: 'auto' 
       }}>
 
-      <aside className={`col-12 col-sm-3 ${s.side_bar}`}>
+      <aside className={`col-xs-12 col-sm-3 ${s.side_bar}`}>
         <AboutColumn social={socialItems} />
       </aside>
 
-      <section className={`col-12 col-sm-9 ${s.posts_content}`}>
+      <section className={`col-xs-12 col-sm-9 ${s.posts_content}`}>
         {children}
       </section>
     </div>
