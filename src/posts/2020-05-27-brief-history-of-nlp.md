@@ -96,7 +96,7 @@ In practice, FastText results in relatively comparable performance with GloVe, b
 
 Why I specifically dived into FastText is because _breaking down words into subword units_ would later become a staple for language models to limit vocabulary, which improves computational efficiency, and account for unseen words.
 
-Reference:
+References:
 - [Efficient Estimation of Word Representations in Vector Space (2013)](https://arxiv.org/abs/1301.3781)
 
 - [GloVe: Global Vectors for Word Representation](https://nlp.stanford.edu/projects/glove/)
