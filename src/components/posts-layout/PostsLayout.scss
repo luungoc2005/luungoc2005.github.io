@@ -14,7 +14,8 @@
 }
 
 .posts_content {
-
+  margin-bottom: 128px;
+  
   margin-left: 12px;
   margin-right: 12px;
   width: 100%;
@@ -30,5 +31,46 @@
 
   p {
     margin: 0 0 1.3em;
+  }
+
+  h1 {
+    font-size: larger;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
+    line-height: 3em;
+  }
+
+  ol {
+    list-style: decimal inside;
+  }
+
+  ul {
+    list-style: inside;
+  }
+
+  em {
+    font-style: italic;
+  }
+
+  hr {
+    border-bottom: 1px solid #333;
+    margin-bottom: 8px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0.5rem;
+    margin: 18px 0px;
+  }
+  th, td {
+    border: solid thin #999;
+    padding: .5em;
+  }
+  th {
+    color: #479b6b;
+    font-weight: 400;
   }
 }

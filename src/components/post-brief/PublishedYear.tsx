@@ -1,4 +1,4 @@
-import React, { ReactNode, Children } from 'react';
+import React, { ReactNode } from 'react';
 
 import s from './PublishedYear.scss'
 

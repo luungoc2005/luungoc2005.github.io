@@ -18,20 +18,6 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-typescript',
     'gatsby-plugin-twitter',
-    {
-      resolve: 'gatsby-transformer-remark',
-      options: {
-        plugins: [{
-          resolve: `gatsby-remark-vscode`,
-          options: {
-            theme: 'Solarized Light', // Or install your favorite theme from GitHub
-            inlineCode: {
-              marker: '•'
-            }
-          }
-        }]
-      }
-    },
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {
@@ -42,11 +28,17 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              // It's important to specify the maxWidth (in pixels) of
-              // the content container as this plugin uses this as the
-              // base for generating different widths of each image.
               maxWidth: 590,
+              showCaptions: true,
+              markdownCaptions: true,
             },
+          },
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              theme: 'Solarized Light', // Or install your favorite theme from GitHub
+              inlineCodeMarker: '•',
+            }
           },
           {
             resolve: "gatsby-remark-custom-blocks",
