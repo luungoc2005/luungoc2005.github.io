@@ -1,6 +1,6 @@
 ---
 title: A history of progress on text representation in NLP (Part 1 - Word-level representation)
-date: 2019-05-27
+date: 2020-05-27
 tags: [ai]
 published: true
 ---
@@ -22,7 +22,7 @@ About data representation in NLP: or - "vectorization" of text: In Computer Visi
 
 For text, however, self-supervised learning has always been a high priority effort - due to the lack of _labelled_ data. You will find a lot of ideas center around the creative use and manipulation of data to include extra data into the representation and reduce information loss. I will try to highlight this factor on every paper outlined here.
 
-# Progress on text representation
+# Progress on word representation
 ---
 
 # 1. One-hot encoding and TF-IDF
