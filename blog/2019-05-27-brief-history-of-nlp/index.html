@@ -64,7 +64,7 @@
 <p>The final word vector for <code class="language-text">where</code> is then computed as the sum of the modular vectors.</p>
 <p>This method has 2 advantages over the original paper: first, including subword information is helpful, at least for the English language - as e.g <code class="language-text">national</code> and <code class="language-text">nationalism</code> would share a lot of aspects in meaning. Second - this helps dealing with unseen or made-up words, by being able to approximate the meaning if it's based on existing words.</p>
 <p>In practice, FastText results in relatively comparable performance with GloVe, but has the ability to account for unseen words.</p>
-<p>Why I specifically dived into FastText is because <em>breaking down words into subword units</em> would later become a staple for language models to limit vocabulary, which improves computational efficiency, and account for unseen words.</p>
+<p>Why I specifically dived into FastText is because <em>breaking down words into subword units</em> would later become a staple for language models to limit vocabulary, which improves computational efficiency, and giving the ability to account for unseen words.</p>
 <p>Reference:</p>
 <ul>
 <li><a href="https://arxiv.org/abs/1301.3781">Efficient Estimation of Word Representations in Vector Space (2013)</a></li>
