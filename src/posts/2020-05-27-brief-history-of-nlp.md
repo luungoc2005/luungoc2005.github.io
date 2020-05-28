@@ -11,7 +11,7 @@ published: true
 To start this off with a bit of personal background story: As far as formal education goes - I am no expert on AI. However that I managed to pick up and rapidly learn AI over the years - is due to the creative - but - intuitive nature of the ideas that are regularly churned out and experimented with, leading to state-of-the-art results.
 
 [[snippet]]
-|In this article, I will outline through some of the most popular breakthroughs in AI - with hope to inspire people on diving in deeper and experiment more - maybe even revisit old techniques and apply on top of newer architectures.
+|In this article, I will outline through some of the most popular breakthroughs in AI in a semi-chronological order, with hope to inspire people on diving in deeper and experiment more, maybe even revisit old techniques and apply on top of newer architectures.
 
 I will skim on a lot of the intricacies and only focus on making a lot of this easy to understand and focus on the more intuitive parts. I highly encourage people to not be intimidated and read the original papers, with a lot of them detailing the process that lead the authors to the idea - that in itself is often extremely insightful and intriguing to read.
 
@@ -65,7 +65,7 @@ This paper was a milestone for the use of deep neural networks in NLP. It propos
 |`(<?>,<?>,brown,<?>,<?>) ➞ (the,quick,fox,jumps)`|`(the,quick,<?>,fox, jumps) ➞ brown`|
 
 With _gradient descent_, it begins by randomizing - usually a 200-d or 300-d vector - for each words (instead of one-hot encoding), then train for this objective. By the end of training, the resulting word vectors gain an interesting property: the words that are closer in meaning are generally _drawn closer_ - meaning having shorter vector distance. One way to understand this intuitively is similar words tend to be interchangeable in a sentence.
-![Projecting the vectors into 3D space](https://raw.githubusercontent.com/tensorflow/docs/master/site/en/tutorials/text/images/embedding.jpg)
+![Projecting the vectors into 3D space](assets/brief-history-of-nlp-embedding.jpg)
 
 You can try the [Tensorboard Embedding Projector](http://projector.tensorflow.org/) to see what this looks like.
 
@@ -98,6 +98,25 @@ Why I specifically dived into FastText is because _breaking down words into subw
 
 References:
 - [Efficient Estimation of Word Representations in Vector Space (2013)](https://arxiv.org/abs/1301.3781)
-
 - [GloVe: Global Vectors for Word Representation](https://nlp.stanford.edu/projects/glove/)
 - [Enriching Word Vectors with Subword Information](https://arxiv.org/abs/1607.04606)
+
+# 3. CoVe and ELMo
+
+These papers are actually released much later than the initial Word2Vec era, and built upon ideas and achievements from _sentence representation_. I initially debated to include this in the 2nd part of the article, though this can be used on top of sentence representation in a modular fashion qualifies it for this part.
+
+Initially, CoVe was introduced as a way to take contextual meaning into account for word vectors, through a machine translation task. It uses GloVe vectors, put through a LSTM-based machine translation model, and keep the resulting encoder (discarding the decoder). Note that the encoder is bidirectional (this will be relevant later). The resulting output of the encoder can be concatenated with the input GloVe vectors and used as input for downstream tasks.
+
+The practical achivement of CoVe is that it can be used as an addition to all existing Word2Vec-based models and immediately gives a boost in performance. This quantifies how much performance can be gained from this feature. It also introduces using an additional character-level CNN model for adding character-level features, which it also proves to be able to contribute additional performance at a computational cost.
+
+The improvements from CoVe were quickly forgotten, however, after ELMo was released. ELMo is a forward and backward language model concatenated together (note that this is not _true_ bidirectional) that uses character-level CNN features, trained on the _1 Billion Word Language Model Benchmark_ dataset from scratch. It made a big splash when it was released because:
+
+- It could be used on top of all existing models as a replacement for word embeddings
+- It managed to both employ character-level features (also giving it the ability to handle out-of-vocabulary words) and contextual information for words
+- It improved state-of-the-art by a huge margin
+
+ELMo is, essentially, the pinnacle of the RNN era - where research was still focused on RNN language models. Transformers architecture actually quickly took the stage afterwards. In part 2 I will go into more details on what language models _are_ and introduce Transformers-based models. Stay tuned!
+
+References:
+- [Learned in Translation: Contextualized Word Vectors](http://papers.nips.cc/paper/7209-learned-in-translation-contextualized-word-vectors.pdf)
+- [Deep contextualized word representations](https://arxiv.org/pdf/1802.05365.pdf)

@@ -72,3 +72,16 @@ References:
 - [A simple but tough-to-beat baseline for sentence embeddings](https://openreview.net/pdf?id=SyK00v5xx)
 - [Bag of Tricks for Efficient Text Classification](https://arxiv.org/pdf/1607.01759.pdf)
 - [Convolutional Neural Networks for Sentence Classification](https://www.aclweb.org/anthology/D14-1181.pdf)
+
+# 2. Skip-Thought Vectors
+
+Note that by this time - People are not longer strangers to using recurrent networks (GRU/LSTM) for machine translation. This is, to my knowledge, the first attempt on applying Machine Translation to self-supervised training. The paper also introduces _BookCorpus_, which is a dataset that is often used to this day in combination with Wikipedia for training language models.
+
+The training objective of Skip-Thought Vectors is to generate (or "translate") the previous and following sentence for any given sentence (similar to Word2Vec's skip-gram setup), as illustrated below:
+
+![Skip-Thought Vectors training objective](/assets/brief-history-of-nlp-p2-skip-thought-objective.png)
+
+Side note: This paper also introduces an _interesting_ technique for handling unseen words: It trains a linear mapping between Word2Vec and its encoder's embeddings layer for shared words. After that, unseen words can be taken from Word2Vec and mapped to the model's embedding space. This does seem to work decently from the examples given by the paper.
+
+All in all, the 2 most important contributions of this work is the BookCorpus dataset and it paved the way for sentence embeddings by proving that it can outperform existing techniques.
+
