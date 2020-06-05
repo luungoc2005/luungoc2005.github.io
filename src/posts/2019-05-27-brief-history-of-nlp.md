@@ -94,10 +94,9 @@ This method has 2 advantages over the original paper: first, including subword i
 
 In practice, FastText results in relatively comparable performance with GloVe, but has the ability to account for unseen words.
 
-Why I specifically dived into FastText is because _breaking down words into subword units_ would later become a staple for language models to limit vocabulary, which improves computational efficiency, and account for unseen words.
+Why I specifically dived into FastText is because _breaking down words into subword units_ would later become a staple for language models to limit vocabulary, which improves computational efficiency, and giving the ability to account for unseen words.
 
 Reference:
 - [Efficient Estimation of Word Representations in Vector Space (2013)](https://arxiv.org/abs/1301.3781)
-
 - [GloVe: Global Vectors for Word Representation](https://nlp.stanford.edu/projects/glove/)
 - [Enriching Word Vectors with Subword Information](https://arxiv.org/abs/1607.04606)
