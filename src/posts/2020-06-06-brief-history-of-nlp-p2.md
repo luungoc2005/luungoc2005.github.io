@@ -139,13 +139,23 @@ References:
 
 Around this time, various other non-architectural tricks have also been employed and incorporated into models. These are just as important in terms of efficiency, and some are still widely used.
 
-- **Sub-word and Byte-pair encoding tokenization**: Sub-word segmentation and BPE has become a standard to solve the out-of-vocabulary issue. For a bit of background: in the word vector era, pre-trained word vectors would have in the 800k - 6 _billion_ words. It was simply not viable in terms of computational and memory resources to use that many classes for neural network models. Therefore all models with embedding layers usually reduce this vocabulary size to around 50k or even 20k most common words. This often leaves words that don't exist in the vocabulary and would often have to be replaced with a representative _<unknown>_ token. Sub-word segmentation is a mid-ground workaround for the issue. For example, by segmenting "performer" into "perform## and ##er", and "player" into "play## and ##er", we can reuse the token "##er" and also use the token "perform##" for "perform##"+"##ance". This also potentially helps embed prefix and subfix grammatical meanings (e.g "-er" usually represents people) into the model. The solution is not perfect - however - there can still be out-of-vocabulary tokens and there are cases where the segmentation algorithm cannot work perfectly.
+**Sub-word and Byte-pair encoding tokenization**
+
+Sub-word segmentation and BPE has become a standard to solve the out-of-vocabulary issue. For a bit of background: in the word vector era, pre-trained word vectors would have in the 800k - 6 _billion_ words. It was simply not viable in terms of computational and memory resources to use that many classes for neural network models. Therefore all models with embedding layers usually reduce this vocabulary size to around 50k or even 20k most common words. This often leaves words that don't exist in the vocabulary and would often have to be replaced with a representative `_unknown_` token.
+
+Sub-word segmentation is a mid-ground workaround for the issue: For example, by segmenting `"performer"` into `"perform##"` and `"##er"`, and `"player"` into `"play##"` and `"##er"`, we can reuse the token `"##er"` that the 2 words share, and also use the token `"perform##"` for `"perform##"`+`"##ance"`. This also potentially helps embed prefix and subfix grammatical meanings (e.g `"-er"` usually represents people) into the model.
+
+The solution is not perfect - however - there can still be out-of-vocabulary tokens and there are cases where the segmentation algorithm cannot work perfectly.
 
 _Side note_: Character-level models would obviously be the way to perfect representations that will have no out-of-vocabulary issue - hence it was actually employed partly in ELMo. However, this would significantly increase the tokens count in each sentence, which is both computationally expensive and causes forgetting in LSTM networks, which generally leads to inferior performance compared to word-level or subword-level models.
 
-- **Weight-tying for embeddings**: Normally, language models are extremely similar to neural machine translation models - save for one part: the input and output vocabulary are the same for language models. Since the output layer is usually a linear (vocabulary size x hidden size) layer, which is often the shape of the embedding layer, their weights can be tied to save a lot on memory consumption and provides a small regularization effect. This trick was employed in AWD-LSTM.
+**Weight-tying for embeddings**
 
-- **Adaptive softmax**: By dividing softmax classes into smaller clusters, exploiting natural word distribution, this trick helps massively speed up softmax computation on GPUs for vocabulary size of around 50k and over. This can massively help training neural machine translation models and language models on consumer-grade GPUs. It has reduced efficiency for smaller vocabulary sizes, however, hence it is not often employed in recent models where the vocabulary size often settles at around 30k.
+Normally, language models are extremely similar to neural machine translation models - save for one part: the input and output vocabulary are the same for language models. Since the output layer is usually a linear (vocabulary size x hidden size) layer, which is often the shape of the embedding layer, their weights can be tied to save a lot on memory consumption and provides a small regularization effect. This trick was employed in AWD-LSTM.
+
+**Adaptive softmax**
+
+By dividing softmax classes into smaller clusters, exploiting natural word distribution, this trick helps massively speed up softmax computation on GPUs for vocabulary size of around 50k and over. This can massively help training neural machine translation models and language models on consumer-grade GPUs. It has reduced efficiency for smaller vocabulary sizes, however, hence it is not often employed in recent models where the vocabulary size often settles at around 30k.
 
 References:
 
