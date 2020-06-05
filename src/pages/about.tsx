@@ -25,7 +25,7 @@ export default () => (
           (although I don't frequent Twitter as much).
         </p>
 
-        <p>Please check back in a week and I might have something that will worth your while 😋</p>
+        <p>Please check back the <a href="/blog">blog</a> page every once in a while and I might have something that will worth your while 😋</p>
       </>}
     />
   </>
