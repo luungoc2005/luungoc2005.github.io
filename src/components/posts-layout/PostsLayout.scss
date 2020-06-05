@@ -3,7 +3,6 @@
 }
 
 .side_bar {
-
   margin-left: auto;
   margin-right: auto;
 
@@ -14,10 +13,12 @@
 }
 
 .posts_content {
+  text-align: justify;
+
   margin-bottom: 128px;
   
   margin-left: 12px;
-  margin-right: 12px;
+  margin-right: 24px;
   width: 100%;
 
   @media only screen and (min-width: 48em) {
@@ -29,7 +30,7 @@
     color: #497e60;
   }
 
-  p {
+  p, ol, ul {
     margin: 0 0 1.3em;
   }
 
@@ -72,5 +73,18 @@
   th {
     color: #479b6b;
     font-weight: 400;
+  }
+
+  blockquote {
+    margin: 2em 1em;
+    border-left: 0.25em solid #666;
+    padding-left: 1em;
+    font-style: italic;
+  }
+
+  figcaption {
+    margin: 8px 0;
+    font-size: .8em;
+    text-align: center;
   }
 }

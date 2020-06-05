@@ -21,7 +21,7 @@ export const PostsLayout = ({
 
     <Helmet title={title} />
 
-      <div className="container row" style={{ 
+      <div className="container-fluid row" style={{ 
         marginLeft: 'auto', 
         marginRight: 'auto' 
       }}>

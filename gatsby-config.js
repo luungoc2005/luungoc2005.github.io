@@ -26,9 +26,15 @@ module.exports = {
         plugins: [
           'gatsby-remark-reading-time',
           {
+            resolve: `gatsby-remark-copy-linked-files`,
+            options: {
+              destinationDir: `static/`,
+            },
+          },
+          {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 590,
+              maxWidth: 992,
               showCaptions: true,
               markdownCaptions: true,
             },
