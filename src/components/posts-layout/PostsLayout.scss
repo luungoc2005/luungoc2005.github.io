@@ -95,4 +95,16 @@
     font-size: .8em;
     text-align: center;
   }
+
+  div {
+    table {
+      border-spacing: 0;
+      max-height: 500px;
+    }
+
+    th, td {
+      border: 0;
+      padding: .5em;
+    }
+  }
 }

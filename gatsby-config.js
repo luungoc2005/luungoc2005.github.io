@@ -40,6 +40,13 @@ module.exports = {
             },
           },
           {
+            resolve: "gatsby-remark-embed-gist",
+            options: {
+              username: 'luungoc2005',
+              includeDefaultCss: true
+            }
+          },
+          {
             resolve: `gatsby-remark-prismjs`,
             options: {
               theme: 'Solarized Light', // Or install your favorite theme from GitHub

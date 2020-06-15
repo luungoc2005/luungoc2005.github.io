@@ -1,0 +1,17 @@
+div.gist-data {
+  max-height: 500px;
+}
+
+div.gist table {
+  border-spacing: 0;
+  max-height: 400px;
+}
+
+div.gist th, td {
+  border: 0;
+  padding: .5em;
+}
+
+div.gatsby-highlight {
+  font-size: 13px;
+}

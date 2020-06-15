@@ -5,6 +5,7 @@ import { AboutColumn } from 'components/about-col/AboutColumn';
 import { socialItems } from 'components/app-layout/AppLayout';
 
 import s from './PostsLayout.scss'
+import './globals.css'
 
 export interface PostsLayoutProps {
   title?: string;
