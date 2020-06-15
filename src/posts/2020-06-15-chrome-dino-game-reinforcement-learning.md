@@ -147,7 +147,7 @@ Because the game does speed up after a while, we attempt to capture part of this
 
 _This agent actually manages to get ~20% higher scores than human players_
 
-In our case, we can either use the score as the reward or, because we prefer stepwise reward to overall reward (easier for the model), just `1` if the dinosaur still survives and `-100` when it crashes. This is to make the model disproportionately penalizes the agent when it crashes.
+In our case, we can either use the score as the reward or, because we prefer stepwise reward to overall reward (easier for the model), just `.1` if the dinosaur still survives and `-1` when it crashes. This is to make the model disproportionately penalizes the agent when it crashes. This detail is unimportant, however, as most algorithms also considers episode-wise rewards, which would be the final score after the game ended.
 
 In this case, the reward is straightforward because our goal - to survive as long as possible - is simple to model. Other games may require some trial and error for this step. Because how Reinforcement Learning works is first _random exploration_, essentially throwing things at the wall to see what sticks, it might never get to the goal if it's too hard to randomly press buttons and get to checkpoints or goals for rewards. That's why - for example - a game of _snake_ may require the _distance between the snake's head and the pellet_ to be factored into the reward.
 
