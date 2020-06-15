@@ -68,7 +68,7 @@ _driver \
 
 The game screen itself is rendered to a `canvas` with `class="runner-canvas"`, therefore we can easily get the entire game screen with `.toDataURL()`
 
-The game also exposes a `Runner` object to global space (convenient! in the world of minifiers...), where we can get whether the game is still running with `js•console.log(Runner.instance_.playing)`. The score can be read from `js.log(Runner.instance_.distanceMeter.digits)` as an array of digits, though that is not entirely necessary in this case.
+The game also exposes a `Runner` object to global space (convenient! in the world of minifiers...), where we can get whether the game is still running with `js•console.log(Runner.instance_.playing)`. The score can be read from `js•console.log(Runner.instance_.distanceMeter.digits)` as an array of digits, though that is not entirely necessary in this case.
 
 Similarly, controls to the game can be sent with `send_keys`.
 
