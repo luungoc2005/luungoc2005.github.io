@@ -27,6 +27,15 @@
     a {
       font-weight: 400;
     }
+
+    &.small {
+      a {
+        display: block;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+    }
   }
 
   &__meta {
@@ -36,16 +45,33 @@
     svg {
       width: .8em;
     }
+
+    &.small {
+      margin-top: 5px;
+      display: block;
+    }
   }
 
   &__content {
     margin: 12px 0;
     font-family: $font-family;
+    text-align: justify;
+
+    &.small {
+      line-height: 24px;
+      max-height: 120px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
   }
 
   &__back_top {
     float: right;
     text-transform: uppercase;
     font-size: 0.8em;
+
+    &.small {
+      display: none;
+    }
   }
 }

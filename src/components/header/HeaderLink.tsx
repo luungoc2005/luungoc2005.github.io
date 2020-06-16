@@ -7,7 +7,7 @@ import { OutboundLink } from "gatsby-plugin-google-analytics"
 import s from './HeaderLink.scss';
 
 interface HeaderLinkProps {
-  name: string;
+  name?: string;
   to: string;
   icon?: ReactNode;
 }

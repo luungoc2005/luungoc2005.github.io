@@ -4,7 +4,7 @@
   padding: 60px 0;
 
   @media (min-width: $min-768) {
-    padding: 180px 0;
+    padding: 80px 0;
   }
 
   &__col {
@@ -12,6 +12,12 @@
 
     @media (min-width: $min-768) {
       @include grid-col(5);
+    }
+
+    &.full_width {
+      @media (min-width: $min-768) {
+        @include grid-col(12);
+      }
     }
   }
 
@@ -21,6 +27,11 @@
     margin-bottom: 10px;
 
     font-family: $font-heading;
+
+    a {
+      display: inline-block;
+      margin-left: 12px !important;
+    }
   }
 
   &__description {
