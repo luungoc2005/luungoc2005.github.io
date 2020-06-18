@@ -1,7 +1,7 @@
 ---
 title: "Tutorial: Build AI to play Google Chrome Dino game with Reinforcement Learning in 30 minutes"
 date: 2020-06-15
-tags: [ai,tutorial]
+tags: [ai]
 published: true
 ---
 
@@ -68,7 +68,7 @@ _driver \
 
 The game screen itself is rendered to a `canvas` with `class="runner-canvas"`, therefore we can easily get the entire game screen with `.toDataURL()`
 
-The game also exposes a `Runner` object to global space (convenient! in the world of minifiers...), where we can get whether the game is still running with `js•console.log(Runner.instance_.playing)`. The score can be read from `js•console.log(Runner.instance_.distanceMeter.digits)` as an array of digits, though that is not entirely necessary in this case.
+The game also exposes a `Runner` object to global space (convenient! in the world of minifiers...), where we can get whether the game is still running with `js•console.log(Runner.instance_.playing)`. The score can be read from `js•console.log(Runner.instance_.distanceMeter.digits)` as an array of digits, though that is not entirely necessary because the game is an endless runner - meaning we can just keep rewarding the agent until the game stops.
 
 Similarly, controls to the game can be sent with `send_keys`.
 
@@ -203,7 +203,7 @@ This will lead to pretty decent results - if only for demonstrative purposes. Yo
 
 As `DQN` does not support multiprocessing, however, we can opt for `PPO` to hasten the training process. Important note though: even if I can use these algorithms interchangeably in these cases, a lot of times, some algorithms are designed for certain scenarios, while others might not even converge on certain problems. It might even take some trial and error to choose the right algorithm. A starting guideline can be found on `stable-baselines` docs: https://stable-baselines.readthedocs.io/en/master/guide/rl_tips.html#which-algorithm-should-i-use
 
-With this we can train and run 4 agents at once, simultaneously - which can speed up training by a lot. Here is an agent that has been trained for a few hours with the `PPO` algorithm: (screenshots are taken directly from Chrome, the black background is due to transparency)
+With this we can train and run 4 agents at once, simultaneously - which can speed up training by a lot - especially since we cannot fast-forward browser games as compared to emulators. Here is an agent that has been trained for a few hours with the `PPO` algorithm: (screenshots are taken directly from Chrome, the black background is due to transparency)
 
 ![Running 4 instances at once with a trained agent](assets/chrome-dino-game-reinforcement-learning-observation-agent.gif)
 

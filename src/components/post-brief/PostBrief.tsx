@@ -1,10 +1,13 @@
 import React, { ReactNode } from 'react';
 
+import { PostTag } from './PostTag';
+
 import s from './PostBrief.scss'
 
 export interface PostBriefProps {
   title: string;
   slug: string;
+  tags?: string[];
   children: ReactNode;
   readingTime: string;
   small?: boolean;
@@ -12,6 +15,7 @@ export interface PostBriefProps {
 
 export const PostBrief = ({
   title,
+  tags,
   slug,
   readingTime,
   children,
@@ -24,6 +28,9 @@ export const PostBrief = ({
         href={slug} style={{ marginRight: 12 }}
         title={title}
       >
+        {tags && tags.map((tag, tag_ix) => 
+          <PostTag key={tag_ix} title={tag} />
+        )}
         {title}
       </a>
       <div className={`${s.post_brief__meta}${small ? " " + s.small : ""}`}>

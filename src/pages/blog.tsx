@@ -18,6 +18,7 @@ export interface BlogNode {
     frontmatter: {
       title: string
       date: string
+      tags: string[]
     }
   }
 }
@@ -50,6 +51,7 @@ export const BlogPage = ({ data }: BlogPageProps) => {
             : <></>}
             <PostBrief
               title={edge.node.frontmatter.title}
+              tags={edge.node.frontmatter.tags}
               readingTime={edge.node.fields.readingTime.text}
               slug={edge.node.fields.slug}
             >
@@ -78,6 +80,7 @@ query PostsQuery {
         frontmatter {
           title
           date
+          tags
         }
         fields {
           readingTime {

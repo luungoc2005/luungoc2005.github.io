@@ -38,6 +38,7 @@ export default ({ data }: BlogPageProps) => (
                 <PostBrief
                   small
                   title={edge.node.frontmatter.title}
+                  tags={edge.node.frontmatter.tags}
                   readingTime={edge.node.fields.readingTime.text}
                   slug={edge.node.fields.slug}
                 >
@@ -88,6 +89,7 @@ query IndexQuery {
         frontmatter {
           title
           date
+          tags
         }
         fields {
           readingTime {

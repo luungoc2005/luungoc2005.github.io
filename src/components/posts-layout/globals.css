@@ -1,14 +1,14 @@
 div.gist-data {
   max-height: 500px;
+  line-height: initial;
 }
 
 div.gist table {
   border-spacing: 0;
-  max-height: 400px;
 }
 
 div.gist th, td {
-  border: 0;
+  border: 0 !important;
   padding: .5em;
 }
 
