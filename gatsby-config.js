@@ -192,34 +192,6 @@ module.exports = {
     },
     {
       resolve: `gatsby-plugin-sitemap`,
-      options: {
-        output: `/sitemap.xml`,
-        exclude: [],
-        query: `
-        {
-          wp {
-            generalSettings {
-              siteUrl
-            }
-          }
-
-          allSitePage {
-            nodes {
-              path
-            }
-          }
-        }`,
-        resolveSiteUrl: ({site, allSitePage}) => {
-          return site.wp.generalSettings.siteUrl
-        },
-        // https://www.sitemaps.org/protocol.html
-        serialize: ({ site, allSitePage }) =>
-          allSitePage.nodes.map(node => ({
-            url: `${site.wp.generalSettings.siteUrl}${node.path}`,
-            changefreq: `weekly`,
-            priority: 0.5,
-          }))
-      }
     },
   ],
 };
