@@ -25,6 +25,8 @@ export default () => (
           (although I don't frequent Twitter as much).
         </p>
 
+        <p>I will try to write semi-regularly on my current interests, so mostly likely will be web development and AI. That said, because I am still trying to find an audience, I might change and put more focus on certain topics in the future.</p>
+
         <p>Please check back the <a href="/blog">blog</a> page every once in a while and I might have something that will worth your while 😋</p>
       </>}
     />
