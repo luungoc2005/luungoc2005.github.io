@@ -79,6 +79,7 @@
     "printWidth": 100
   },
   "dependencies": {
+    "@weknow/gatsby-remark-codepen": "^0.1.0",
     "date-fns": "^2.14.0",
     "disqus-react": "^1.0.8",
     "gatsby": "2.21.10",
