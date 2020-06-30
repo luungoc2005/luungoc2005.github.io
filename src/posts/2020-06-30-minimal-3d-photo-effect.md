@@ -57,7 +57,7 @@ res = enhancer.enhance(5)
 res.save(args.output_path+'/'+output_file_name+'_'+args.task+'_'+type+'.png')
 ```
 
-Side note: Given that the model is UNet-based - the intuition here is the model does not actually "estimate" the depth of the image as how humans would, but rather it does so by identifying the different objects and draw regions on the image. As such, it would work better for certain objects and scenes compared to others. In this case, this model would work best for indoor furniture scenes, as those are abundant in its training dataset.
+_Side note_: Given that the model is UNet-based - the intuition here is the model does not actually "estimate" the depth of the image as how humans would, but rather it does so by identifying the different objects and draw regions on the image. As such, it would work better for certain objects and scenes compared to others. In this case, this model would work best for indoor furniture scenes, as those are abundant in its training dataset. It probably would not work as well for different objects, say, paintings or animals.
 
 # Minimal code 3D Photo with PixiJS
 ---
