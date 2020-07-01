@@ -18,6 +18,7 @@ export const helmet = {
     { name: 'msapplication-navbutton-color', content: '#000' },
     { name: 'msapplication-TileColor', content: '#000' },
     { name: 'theme-color', content: '#000' },
+    { name: 'google-site-verification', content: 'UlnCqEaT-_IXvcf5Y5levG2YHwz2v0cksM9XxTDMh7E' },
 
     { property: 'og:title', content: title },
     { property: 'og:image', content: share },
