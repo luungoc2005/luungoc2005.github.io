@@ -9,7 +9,7 @@ published: true
 ---
 
 [[snippet]]
-The [Cloud Native Computing Foundation](https://www.cncf.io/) (or CNCF) offers 2 Kubernetes (or k8s - as in 8 characters between k and s) exam certifications - The CKA and CKAD exams. After taking the CKAD exam, I feel like there are several personal tips I can share, in addition to the various tips by others you can easily find online.
+|The [Cloud Native Computing Foundation](https://www.cncf.io/) (or CNCF) offers 2 Kubernetes (or k8s - as in 8 characters between k and s) exam certifications - The CKA and CKAD exams. After taking the CKAD exam, I feel like there are several personal tips I can share, in addition to the various tips by others you can easily find online.
 
 Firstly, you might ask - what are the differences between the CKA and CKAD exams? From course syllabuses, the main difference is the CKAD is about deploying an application to a cluster, and the CKA exam is about installing k8s on bare instances, and managing/troubleshooting a running cluster. The CKA exam is longer, 3 hrs vs 2 hrs of the CKAD exam, but they are somewhat equal in difficulty level: relatively easy. For reference, it took me 1 week with ~2 hrs/day to prepare for the exam.
 
