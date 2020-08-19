@@ -30,7 +30,9 @@ In general, however, most businesses are cautious in using AI, thanks to ownersh
 # Where does it go wrong?
 ---
 
-First, dataset bias is prevalent. Public datasets are mostly meant for research, as proof of concept for models - they often come with disclaimers on how they should not be used to build products.
+First, dataset bias is prevalent. Public datasets are mostly meant for research, as proof of concept for models - they often come with disclaimers on how they should not be used to build products. They do not have the responsibility to be vetted and guarded against biases. However, disclaimers do little in stopping eager people from using them to make products.
+
+
 
 # Looking forward
 ---
