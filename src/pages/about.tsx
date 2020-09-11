@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 
+import CKAD_Certificate from 'assets/images/ckad_from_cncfsite.png';
 import { Intro } from 'components/intro/Intro';
 import { BlockText } from 'components/block-text/BlockText';
 
@@ -29,6 +30,19 @@ export default () => (
 
         <p>Please check back the <a href="/blog">blog</a> page every once in a while and I might have something that will worth your while 😋</p>
       </>}
+    />
+
+    <BlockText
+      heading="Certifications"
+      description={<div style={{ marginTop: 20, display: 'flex' }}>
+        <a href="https://www.youracclaim.com/badges/463bf288-9ee1-45bf-a047-e96beda7d770/public_url">
+          <img alt="youracclaim.com - CKAD: Certified Kubernetes Application Developer" src={CKAD_Certificate} />
+        </a>
+        
+        <a href="https://www.credential.net/480ed014-5c0c-4859-9354-a9d3d912eb28">
+          <img alt="credential.net - Google Associate Cloud Engineer" src="https://api.accredible.com/v1/frontend/credential_website_embed_image/badge/23109421?key=9a9b045e431b34684afeccdc9fc0e32b162fbacd2d24813e9f0875d79baf3400" />
+        </a>
+      </div>}
     />
   </>
 );
