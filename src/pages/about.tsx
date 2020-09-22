@@ -8,6 +8,7 @@ import { BlockText } from 'components/block-text/BlockText';
 import { OutboundLink } from "gatsby-plugin-google-analytics";
 
 const BADGE_STYLE = {
+  maxWidth: 'initial',
   width: 200,
   height: 200,
   marginRight: 20,
@@ -51,6 +52,10 @@ export default () => (
         
         <a href="https://www.credential.net/09b56d5b-7b6b-468f-b30c-408c8244d548?key=090a57a8e7ff8955bca18877a7a60e061b458a8a9544ccac7626ac19599bc26b">
           <img style={BADGE_STYLE} alt="credential.net - Google Professional Cloud Architect" src="https://api.accredible.com/v1/frontend/credential_website_embed_image/badge/23256878?key=090a57a8e7ff8955bca18877a7a60e061b458a8a9544ccac7626ac19599bc26b" />
+        </a>
+
+        <a href="https://www.credential.net/b4233e2d-48a4-409a-9e8b-56356b6ac10d">
+          <img style={BADGE_STYLE} alt="credential.net - Google Professional Data Engineer" src="https://api.accredible.com/v1/frontend/credential_website_embed_image/badge/23519522?key=bc828df83558dcc5b8d47755243a9e26327e61ddc16682b0f748f9c019204f6b" />
         </a>
       </div>}
     />
