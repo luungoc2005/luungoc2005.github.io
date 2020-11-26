@@ -9,7 +9,7 @@ published: true
 ---
 
 [[snippet]]
-Have you ever wondered how you could build your own Google Image Search? This tutorial will walk you through so you can build your own in 15 minutes.
+|Have you ever wondered how you could build your own Google Image Search? This tutorial will walk you through so you can build your own in 15 minutes.
 
 # Idea: Image encodings
 ---
@@ -80,17 +80,20 @@ distance = np.linalg.norm(vector1 - vector2, axis=0)
 You can then call `encode_image()` for every image in your library to "index" it. You can then encode any given photo and compare to look for the desired photo. It might take some experimentation to find out a **threshold** for a "match" result - otherwise you can only rank the results - from most similar to least.
 
 For example, for these photos:
+
 |Photo 1|Photo 2|
 |:-:|:-:|
 |![Dog](/assets/photo-similarity-dog.jpg)|![Cat](/assets/photo-similarity-cat.jpg)|
-distance = 24.56893
+
+**distance = 24.56893**
 
 |Photo 1|Photo 2|
 |:-:|:-:|
-|![Cat](/assets/photo-similarity-cat.jpg)|![Cat](/assets/photo-similarity-cat2.jpg)|
-distance = 16.510061
+|![Cat](/assets/photo-similarity-cat.jpg)|![Cat](/assets/photo-similarity-cat2.jpeg)|
 
-For the example above, a threshold that would be able to differentiate between dogs and cats, but can find different spieces of dogs or cats, would lie between ~16-24
+**distance = 16.510061**
+
+For the example above, a threshold that would be able to differentiate between dogs and cats, but can find different spieces of dogs or cats, would lie between **~16-24**
 
 This is but one crude method of searching by measuring vector similarity. If you were to use this, you would need a loop through all the vector-encoded images and calculate the distance between the input photo and each target photo.
 
