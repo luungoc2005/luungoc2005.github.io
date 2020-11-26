@@ -54,10 +54,17 @@
 <div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
 distance <span class="token operator">=</span> np<span class="token punctuation">.</span>linalg<span class="token punctuation">.</span>norm<span class="token punctuation">(</span>vector1 <span class="token operator">-</span> vector2<span class="token punctuation">,</span> axis<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span></code></pre></div>
 <p>You can then call <code class="language-text">encode_image()</code> for every image in your library to "index" it. You can then encode any given photo and compare to look for the desired photo. It might take some experimentation to find out a <strong>threshold</strong> for a "match" result - otherwise you can only rank the results - from most similar to least.</p>
-<p>For example, for these photos:
-|Photo 1|Photo 2|
-|:-:|:-:|
-|<figure class="gatsby-resp-image-figure" style="">
+<p>For example, for these photos:</p>
+<table>
+<thead>
+<tr>
+<th align="center">Photo 1</th>
+<th align="center">Photo 2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><figure class="gatsby-resp-image-figure" style="">
     <span
       class="gatsby-resp-image-wrapper"
       style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 992px;"
@@ -90,7 +97,8 @@ distance <span class="token operator">=</span> np<span class="token punctuation"
   </a>
     </span>
     <figcaption class="gatsby-resp-image-figcaption"><p>Dog</p></figcaption>
-  </figure>|<figure class="gatsby-resp-image-figure" style="">
+  </figure></td>
+<td align="center"><figure class="gatsby-resp-image-figure" style="">
     <span
       class="gatsby-resp-image-wrapper"
       style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 992px;"
@@ -122,8 +130,11 @@ distance <span class="token operator">=</span> np<span class="token punctuation"
   </a>
     </span>
     <figcaption class="gatsby-resp-image-figcaption"><p>Cat</p></figcaption>
-  </figure>|
-distance = 24.56893</p>
+  </figure></td>
+</tr>
+</tbody>
+</table>
+<p>distance = 24.56893</p>
 <table>
 <thead>
 <tr>
