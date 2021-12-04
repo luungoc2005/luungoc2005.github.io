@@ -4,7 +4,7 @@ import { Container } from 'components/container/Container';
 
 import { OutboundLink } from "gatsby-plugin-google-analytics";
 
-import s from './Footer.scss';
+import * as s from './Footer.module.scss';
 
 export interface Social {
   icon: ReactNode;

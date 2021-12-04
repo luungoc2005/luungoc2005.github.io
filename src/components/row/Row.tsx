@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react';
 
-import s from './Row.scss';
+import * as s from './Row.module.scss';
 
 interface RowProps {
   children: ReactNode;

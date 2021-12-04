@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react';
 
-import s from './PageHeader.scss';
+import * as s from './PageHeader.module.scss';
 
 interface PageHeaderProps {
   children?: ReactNode;

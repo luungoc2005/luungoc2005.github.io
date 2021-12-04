@@ -15,7 +15,7 @@ import { HeaderLink } from '../header/HeaderLink';
 import { Footer, Social } from '../footer/Footer';
 import { Devtools } from '../devtools/Devtools';
 
-import s from './AppLayout.scss';
+import * as s from './AppLayout.module.scss';
 
 interface AppLayoutProps {
   children: ReactNode;

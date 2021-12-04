@@ -1,3 +1,4 @@
+@use "sass:math";
 @import '~styles/config';
 
 :root {
@@ -140,6 +141,6 @@
 
 @for $i from 1 through $grid-column-count {
   [data-columns='#{$i}'] .grid__column {
-    min-width: 100% / $i;
+    min-width: math.div(100%, $i);
   }
 }

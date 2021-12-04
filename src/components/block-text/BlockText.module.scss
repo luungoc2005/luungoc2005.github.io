@@ -1,3 +1,4 @@
+@use "sass:math";
 @import '~styles/config';
 
 .block {
@@ -38,7 +39,7 @@
     @include rf(16, 18);
 
     font-weight: 300;
-    line-height: (26 / 16);
+    line-height: math.div(26, 16);
 
     a { // stylelint-disable-line
       text-decoration: none;

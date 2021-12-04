@@ -1,3 +1,5 @@
+@use "sass:math";
+
 @mixin fit {
   position: absolute;
   top: 0;
@@ -8,7 +10,7 @@
 
 @function strip-unit($number) {
   @if type-of($number) == 'number' and not unitless($number) {
-    @return $number / ($number * 0 + 1);
+    @return math.div($number, ($number * 0 + 1));
   }
 
   @return $number;
@@ -20,7 +22,7 @@
   $unitless-min: strip-unit($min-size);
   $unitless-size: strip-unit($size);
   $baseline: strip-unit($min-mobile);
-  $font-multiplier: (($unitless-size - $unitless-min) / (strip-unit($limit) - $baseline));
+  $font-multiplier: math.div(($unitless-size - $unitless-min), (strip-unit($limit) - $baseline));
   $font-baseline: ($unitless-min - $font-multiplier * $baseline);
 
   @if $unitless-min >= $unitless-size {
@@ -91,8 +93,8 @@
   @include vertically-responsive(padding-bottom, $padding-bottom-mobile-unitless * 1px);
 
   @media (min-width: $min-tablet) {
-    @include vertically-responsive(padding-top, percentage(($padding-top-unitless * 1px) / $page-limit));
-    @include vertically-responsive(padding-bottom, percentage(($padding-bottom-unitless * 1px) / $page-limit));
+    @include vertically-responsive(padding-top, percentage(math.div(($padding-top-unitless * 1px), $page-limit)));
+    @include vertically-responsive(padding-bottom, percentage(math.div(($padding-bottom-unitless * 1px), $page-limit)));
   }
 
   @media (min-width: $page-limit) {

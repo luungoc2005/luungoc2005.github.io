@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react';
 
-import s from './Container.scss';
+import * as s from './Container.module.scss';
 
 interface ContainerProps {
   children: ReactNode;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import s from './PostTag.scss'
+import * as s from './PostTag.module.scss'
 
 const DEFAULT_COLOR = "#a6dcef";
 const TAG_COLORS: { [key: string]: string; } = {

@@ -16,6 +16,7 @@ module.exports = {
         respectDNT: true,
       }
     },
+    'gatsby-plugin-sass',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-typescript',
     'gatsby-plugin-twitter',
@@ -41,7 +42,7 @@ module.exports = {
             },
           },
           {
-            resolve:"@weknow/gatsby-remark-codepen",
+            resolve: "@weknow/gatsby-remark-codepen",
             options: {
               theme: "dark",
               height: 400
@@ -64,11 +65,11 @@ module.exports = {
           {
             resolve: "gatsby-remark-custom-blocks",
             options: {
-                "blocks": {
-                    "snippet": {
-                        "classes": "snippet"
-                    },
+              "blocks": {
+                "snippet": {
+                  "classes": "snippet"
                 },
+              },
             },
           },
         ],
@@ -117,84 +118,84 @@ module.exports = {
     {
       "resolve": "gatsby-plugin-excerpts",
       "options": {
-          "sources": {
-              "snippetBlocks": {
-                  "type": "htmlQuery",
-                  "sourceField": "html",
-                  "excerptSelector": ".custom-block.snippet .custom-block-body",
-                  "stripSelector": "a",
-                  "elementReplacements": [
-                      {
-                          "selector": "h6",
-                          "replaceWith": "strong"
-                      },
-                      {
-                          "selector": "h5",
-                          "replaceWith": "h6"
-                      },
-                      {
-                          "selector": "h4",
-                          "replaceWith": "h5"
-                      },
-                      {
-                          "selector": "h3",
-                          "replaceWith": "h4"
-                      },
-                      {
-                          "selector": "h2",
-                          "replaceWith": "h3"
-                      },
-                  ],
+        "sources": {
+          "snippetBlocks": {
+            "type": "htmlQuery",
+            "sourceField": "html",
+            "excerptSelector": ".custom-block.snippet .custom-block-body",
+            "stripSelector": "a",
+            "elementReplacements": [
+              {
+                "selector": "h6",
+                "replaceWith": "strong"
               },
-              "default": {
-                  "type": "htmlQuery",
-                  "sourceField": "html",
-                  "excerptSelector": "html > *",
-                  "ignoreSelector": "img, .gatsby-highlight",
-                  "stripSelector": "a",
-                  "elementReplacements": [
-                      {
-                          "selector": "h6",
-                          "replaceWith": "strong"
-                      },
-                      {
-                          "selector": "h5",
-                          "replaceWith": "h6"
-                      },
-                      {
-                          "selector": "h4",
-                          "replaceWith": "h5"
-                      },
-                      {
-                          "selector": "h3",
-                          "replaceWith": "h4"
-                      },
-                      {
-                          "selector": "h2",
-                          "replaceWith": "h3"
-                      },
-                  ],
-                  "truncate": {
-                      "length": 80,
-                      "byWords": true,
-                      "ellipsis": "…"
-                  },
-              }
+              {
+                "selector": "h5",
+                "replaceWith": "h6"
+              },
+              {
+                "selector": "h4",
+                "replaceWith": "h5"
+              },
+              {
+                "selector": "h3",
+                "replaceWith": "h4"
+              },
+              {
+                "selector": "h2",
+                "replaceWith": "h3"
+              },
+            ],
           },
-          "sourceSets": {
-              "markdownHtml": [
-                  "snippetBlocks",
-                  "default"
-              ]
-          },
-          "excerpts": {
-              "snippet": {
-                  "type": "html",
-                  "nodeTypeSourceSet": {
-                      "MarkdownRemark": "markdownHtml"
-                  }
-              }
+          "default": {
+            "type": "htmlQuery",
+            "sourceField": "html",
+            "excerptSelector": "html > *",
+            "ignoreSelector": "img, .gatsby-highlight",
+            "stripSelector": "a",
+            "elementReplacements": [
+              {
+                "selector": "h6",
+                "replaceWith": "strong"
+              },
+              {
+                "selector": "h5",
+                "replaceWith": "h6"
+              },
+              {
+                "selector": "h4",
+                "replaceWith": "h5"
+              },
+              {
+                "selector": "h3",
+                "replaceWith": "h4"
+              },
+              {
+                "selector": "h2",
+                "replaceWith": "h3"
+              },
+            ],
+            "truncate": {
+              "length": 80,
+              "byWords": true,
+              "ellipsis": "…"
+            },
           }
+        },
+        "sourceSets": {
+          "markdownHtml": [
+            "snippetBlocks",
+            "default"
+          ]
+        },
+        "excerpts": {
+          "snippet": {
+            "type": "html",
+            "nodeTypeSourceSet": {
+              "MarkdownRemark": "markdownHtml"
+            }
+          }
+        }
       },
     },
     {

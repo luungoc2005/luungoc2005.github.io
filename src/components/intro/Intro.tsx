@@ -3,7 +3,7 @@ import React, { ReactNode } from 'react';
 import { Container } from 'components/container/Container';
 import { Row } from 'components/row/Row';
 
-import s from './Intro.scss';
+import * as s from './Intro.module.scss';
 
 interface IntroProps {
   children: ReactNode;

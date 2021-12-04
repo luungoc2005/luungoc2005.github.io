@@ -2,7 +2,7 @@ import React, { ReactNode } from 'react';
 
 import { PostTag } from './PostTag';
 
-import s from './PostBrief.scss'
+import * as s from './PostBrief.module.scss'
 
 export interface PostBriefProps {
   title: string;

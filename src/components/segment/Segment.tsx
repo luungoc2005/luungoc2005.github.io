@@ -2,7 +2,7 @@ import React, { ReactNode } from 'react';
 
 import { Container } from 'components/container/Container';
 
-import s from './Segment.scss';
+import * as s from './Segment.module.scss';
 
 interface SegmentProps {
   children: ReactNode;

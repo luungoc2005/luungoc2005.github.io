@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react';
 
-import s from './PublishedYear.scss'
+import * as s from './PublishedYear.module.scss'
 
 export interface PublishedYearProps {
   children: ReactNode;

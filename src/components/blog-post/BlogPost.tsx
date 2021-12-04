@@ -8,7 +8,7 @@ import { DiscussionEmbed } from 'disqus-react';
 
 import _format from 'date-fns/format'
 
-import s from './BlogPost.scss'
+import * as s from './BlogPost.module.scss'
 
 const SITE_ROOT = "https://luungoc2005.github.io/"
 

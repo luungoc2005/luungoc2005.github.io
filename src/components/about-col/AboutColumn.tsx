@@ -1,6 +1,6 @@
 import React from 'react';
 
-import s from './AboutColumn.scss';
+import * as s from './AboutColumn.module.scss';
 
 import Avatar from 'assets/images/avatar.png';
 import { Social } from 'components/footer/Footer';

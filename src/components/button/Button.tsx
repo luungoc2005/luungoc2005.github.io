@@ -4,7 +4,7 @@ import { Link } from 'components/link/Link';
 
 import { OutboundLink } from "gatsby-plugin-google-analytics";
 
-import s from './Button.scss';
+import * as s from './Button.module.scss';
 
 interface ButtonProps {
   children: ReactNode;

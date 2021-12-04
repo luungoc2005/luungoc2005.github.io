@@ -4,7 +4,7 @@ import { Link } from 'components/link/Link';
 
 // import StarterLogo from 'assets/svg/starter-logo.svg';
 
-import s from './Header.scss';
+import * as s from './Header.module.scss';
 
 interface HeaderProps {
   children: ReactNode;

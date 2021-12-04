@@ -1,9 +1,10 @@
 import React, { useRef, useEffect } from 'react';
 
+import classnames from 'classnames';
 import { useKeyDown } from 'hooks/use-keydown';
 import { useLocalStorage } from 'hooks/use-localstorage';
 
-import s from './GridOverlay.scss';
+import * as s from './GridOverlay.module.scss';
 
 const LOCAL_STORAGE_KEY_HORIZONTAL = '_uenoDevtoolsHorizontalGrid';
 const LOCAL_STORAGE_KEY_VERTICAL = '_uenoDevtoolsVerticalGrid';
@@ -49,7 +50,7 @@ export const GridOverlay = ({ columns, baseline, button }: GridOverlayProps) => 
   return (
     <div
       ref={gridOverlayRef}
-      className={s(s.grid, {
+      className={classnames(s.grid, {
         [s.gridIsHorizontalIsVisible]: isHorizontalVisible,
         isVerticalVisible,
       })}
@@ -69,7 +70,7 @@ export const GridOverlay = ({ columns, baseline, button }: GridOverlayProps) => 
       {button ? (
         <>
           <button
-            className={s(s.grid__button, { vertical: isVerticalVisible })}
+            className={classnames(s.grid__button, { vertical: isVerticalVisible })}
             onClick={onToggleVertical}
           >
             <svg className={s.grid__button__svg} width="14px" height="14px" viewBox="0 0 14 14">
@@ -83,7 +84,7 @@ export const GridOverlay = ({ columns, baseline, button }: GridOverlayProps) => 
           </button>
 
           <button
-            className={s(s.grid__button, { horizontal: isHorizontalVisible })}
+            className={classnames(s.grid__button, { horizontal: isHorizontalVisible })}
             onClick={onToggleHorizontal}
           >
             <svg className={s.grid__button__svg} width="14px" height="14px" viewBox="0 0 14 14">

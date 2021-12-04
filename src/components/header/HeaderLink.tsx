@@ -4,7 +4,7 @@ import { Link } from 'components/link/Link';
 
 import { OutboundLink } from "gatsby-plugin-google-analytics"
 
-import s from './HeaderLink.scss';
+import * as s from './HeaderLink.module.scss';
 
 interface HeaderLinkProps {
   name?: string;

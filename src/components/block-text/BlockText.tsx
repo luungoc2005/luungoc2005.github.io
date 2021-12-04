@@ -6,7 +6,7 @@ import { HeaderLink } from 'components/header/HeaderLink';
 import { Container } from 'components/container/Container';
 import { Row } from 'components/row/Row';
 
-import s from './BlockText.scss';
+import * as s from './BlockText.module.scss';
 
 interface BlockTextProps {
   heading: string;
