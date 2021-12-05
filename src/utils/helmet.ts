@@ -2,7 +2,7 @@ import favicon from 'assets/images/favicon.png';
 import share from 'assets/images/share.png';
 
 const title = 'Ngoc Nguyen\'s Personal Blog';
-const description = 'Ngoc Nguyen is a Singapore-based Software Developer. Currently employed @ 2359Media';
+const description = 'Ngoc Nguyen is a Singapore-based Software Developer. Currently employed @ Grab';
 
 export const helmet = {
   title,

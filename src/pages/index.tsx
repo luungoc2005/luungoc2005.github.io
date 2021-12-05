@@ -55,13 +55,13 @@ export default ({ data }: BlogPageProps) => (
       heading="About me"
       description={
         <>
-          <p style={{ fontWeight: 'bold' }}>
+          {/* <p style={{ fontWeight: 'bold' }}>
             I am open for freelancing!
-          </p>
+          </p> */}
           <p style={{ marginBottom: 40 }}>
             Currently employed at{' '}
-            <OutboundLink href="https://2359media.com" target="_blank" rel="noopener noreferrer">
-              2359 Media
+            <OutboundLink href="https://www.grab.com/sg/" target="_blank" rel="noopener noreferrer">
+              Grab Singapore
             </OutboundLink>{' '}
             as a full-time Software Developer. 
             I build high quality, maintainable and user-friendly digital products.
