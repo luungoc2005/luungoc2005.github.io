@@ -69,3 +69,39 @@ exports.createPages = async ({ graphql, actions }) => {
     })
   })
 }
+
+// TODO: shouldn't need this here, but somehow `snippet` is failing type inference on MarkdownRemark.
+// So we need this workaround for now
+exports.createSchemaCustomization = ({ actions }) => {
+  const { createTypes } = actions
+  const typeDefs = `
+    type MarkdownRemark implements Node @childOf(mimeTypes: ["text/markdown", "text/x-markdown"], types: ["File"]) @derivedTypes @dontInfer {
+      frontmatter: MarkdownRemarkFrontmatter
+      excerpt: String
+      snippet: String
+      rawMarkdownBody: String
+      fileAbsolutePath: String
+      fields: MarkdownRemarkFields
+    }
+
+    type MarkdownRemarkFrontmatter {
+      title: String
+      date: Date @dateformat
+      tags: [String]
+      published: Boolean
+    }
+
+    type MarkdownRemarkFields @derivedTypes {
+      readingTime: MarkdownRemarkFieldsReadingTime
+      slug: String
+    }
+
+    type MarkdownRemarkFieldsReadingTime {
+      text: String
+      minutes: Float
+      time: Float
+      words: Int
+    }
+  `
+  createTypes(typeDefs)
+}
