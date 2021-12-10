@@ -19,9 +19,10 @@ export default ({ data }: BlogPageProps) => (
 
     <Intro>
       Software Developer. Coffee Addict ☕️.<br/>I do{' '}
-      <Highlight>Python</Highlight>,{' '}
       <Highlight>Javascript</Highlight>,{' '}
+      <Highlight>Python</Highlight>,{' '}
       <Highlight>.NET</Highlight>,{' '}
+      <Highlight>Golang</Highlight>,{' '}
       <Highlight>Mobile</Highlight>, and <Highlight>AI</Highlight> stuffs.
     </Intro>
 
