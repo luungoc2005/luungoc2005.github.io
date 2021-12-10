@@ -82,7 +82,7 @@
     "@weknow/gatsby-remark-codepen": "^0.1.0",
     "date-fns": "^2.14.0",
     "disqus-react": "^1.0.8",
-    "gatsby": "^4.0.0-next",
+    "gatsby": "^4.3.0",
     "gatsby-image": "3.11.0",
     "gatsby-plugin-config": "1.0.7",
     "gatsby-plugin-excerpts": "^1.1.0",

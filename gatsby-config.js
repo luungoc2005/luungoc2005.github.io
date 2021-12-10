@@ -116,8 +116,8 @@ module.exports = {
       },
     },
     {
-      "resolve": "gatsby-plugin-excerpts",
-      "options": {
+      resolve: "gatsby-plugin-excerpts",
+      options: {
         "sources": {
           "snippetBlocks": {
             "type": "htmlQuery",
