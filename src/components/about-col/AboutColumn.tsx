@@ -8,16 +8,18 @@ import { OutboundLink } from "gatsby-plugin-google-analytics";
 
 import Location from 'assets/svg/location.svg';
 
+import classnames from 'classnames';
+
 interface AboutColumnProps {
   social: Social[];
 }
 
 export const AboutColumn = ({ social }: AboutColumnProps) => (
-  <div className={`row ${s.about_col}`}>
-    <div className={`col-xs-2 col-sm-12 ${s.about_col__avatar}`}>
+  <div className={classnames("row", s.about_col)}>
+    <div className={classnames("col-xs-2", "col-sm-12", s.about_col__avatar)}>
       <img alt="Avatar" src={Avatar} />
     </div>
-    <div className={`col-xs-8 col-sm-12 ${s.about_col__desc_container}`}>
+    <div className={classnames("col-xs-8", "col-sm-12", s.about_col__desc_container)}>
       <div className={s.about_col__heading}>
         Ngoc Nguyen
       </div>

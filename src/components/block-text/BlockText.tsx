@@ -8,6 +8,8 @@ import { Row } from 'components/row/Row';
 
 import * as s from './BlockText.module.scss';
 
+import classnames from 'classnames';
+
 interface BlockTextProps {
   heading: string;
   description: ReactNode;
@@ -24,7 +26,7 @@ export const BlockText = ({
   <Container>
     <div className={s.block}>
       <Row>
-        <div className={`${s.block__col}${fullWidth ? " " + s.full_width : ""}`}>
+        <div className={classnames(s.block__col, {[s.full_width]: fullWidth})}>
           <h3 className={s.block__heading}>
             {heading}
             {linkTo && <HeaderLink
@@ -33,7 +35,7 @@ export const BlockText = ({
             />}
           </h3>
           <div 
-            className={fullWidth ? "row" : s.block__description}
+            className={classnames({"row": fullWidth, [s.block__description]: !fullWidth})}
             style={fullWidth ? { marginLeft: "-2rem", marginRight: "-2rem" } : undefined}
           >
             {description}
