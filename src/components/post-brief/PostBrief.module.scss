@@ -9,7 +9,6 @@
   margin-bottom: 24px;
   opacity: .8;
   transition: 200ms opacity ease-in-out;
-  height: 100%;
 
   &:hover {
     opacity: 1;
@@ -19,6 +18,10 @@
     content: "";
     clear: both;
     display: table;
+  }
+
+  &.small {
+    height: 100%;
   }
 
   header {

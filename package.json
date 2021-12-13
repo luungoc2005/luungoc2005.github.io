@@ -80,6 +80,7 @@
   },
   "dependencies": {
     "@weknow/gatsby-remark-codepen": "^0.1.0",
+    "classnames": "^2.3.1",
     "date-fns": "^2.14.0",
     "disqus-react": "^1.0.8",
     "gatsby": "^4.3.0",
@@ -120,7 +121,6 @@
     "@types/lodash": "4.14.150",
     "@types/node": "13.13.4",
     "@types/react-helmet": "^5.0.15",
-    "classnames": "^2.2.6",
     "classnames-loader": "^2.1.0",
     "gh-pages": "^2.2.0",
     "prettier": "2.0.5",
