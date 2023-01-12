@@ -9,7 +9,7 @@ published: false
 ---
 
 [[snippet]]
-"AI" missuses are rampant - some are at best merely cringeworthy, others might have disturbing ramifications. In this post, I will try to reason and outline some of the issues caused by the lack of understanding on AI and arguments surrounding them.
+|"AI" missuses are rampant - some are at best merely cringeworthy, others might have disturbing ramifications. In this post, I will try to reason and outline some of the issues caused by the lack of understanding on AI and arguments surrounding them.
 
 # The Tech Mindset
 ---

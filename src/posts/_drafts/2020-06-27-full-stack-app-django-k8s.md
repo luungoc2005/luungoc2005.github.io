@@ -9,7 +9,7 @@ published: false
 ---
 
 [[snippet]]
-I had the recent _pleasure_ of doing a software interview exercise in developing a basic web application in specifically Python. With that, I figure since I spent the effort, might as well document it - something like this would have helped me when I started out.
+|I had the recent _pleasure_ of doing a software interview exercise in developing a basic web application in specifically Python. With that, I figure since I spent the effort, might as well document it - something like this would have helped me when I started out.
 
 While I personally do not favor Python as a web development language (because performance), Django - as a framework - is my second favorite for prototyping (next to [FeatherJS](https://feathersjs.com/)) - fastest way I know to develop a web app with all security and standards details and edge cases considered.
 
