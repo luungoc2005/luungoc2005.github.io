@@ -41,3 +41,13 @@ This is a very practical application of AI, one that companies have been trying 
 This video highlights the benefits of having the model directly outputting audio: Intonation, volume and all. It can _almost_ make music! I feel like the specialized music synthesis companies will still do better for some time, but that's not the point here.
 
 At this point I feel like if I list out all the videos I'll be repeating myself a lot, it's more of the same. Maybe I'll update if I see anything else.
+
+# Conclusion:
+
+This is all very impresive, but for most current use cases, not much is going to change.
+
+To the average user, you can now get a sci-fi-esque voice and video assistant. This might make it more popular with the masses, or they might soon bump into the current limitations (e.g asking what this plan is and have it confidently tell the wrong species). As it is right now, the point-at-image-and-explain use case is still extremely inaccurate for anything serious. Personally I'm only excited for the real-time interpreter use case.
+
+For developers, we obviously welcome the 2x latency and cost reduction. It might allow better response times and maybe more complex reasoning. But otherwise not much is going to change (yet). For the time being, since voice and video is not yet released to API users, and the new model is not leapfrogging GPT-4 on benchmarks, it's going to be an incremental improvement on existing use cases.
+
+Once voice and video rolled out, we might expect more use cases, i.e use voice commands to do stuffs. I feel like this is still more or less a novelty - not sure how people are going to adapt to talking to apps in public. In somewhere like Japan you're going to get a lot of glances for that. It seems like a huge win for accessibility, but that should still be in the minority of the market. We'll see.
