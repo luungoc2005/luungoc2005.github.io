@@ -5,8 +5,7 @@ import { Helmet } from 'react-helmet';
 import { Intro } from 'components/intro/Intro';
 import { Highlight } from 'components/intro/Highlight';
 import { BlockText } from 'components/block-text/BlockText';
-
-import { OutboundLink } from "gatsby-plugin-google-analytics"
+import { Link } from 'components/link/Link';
 
 import { PostBrief } from 'components/post-brief/PostBrief';
 import { BlogPageProps } from './blog';
@@ -61,9 +60,9 @@ export default ({ data }: BlogPageProps) => (
           </p> */}
           <p style={{ marginBottom: 40 }}>
             Currently employed at{' '}
-            <OutboundLink href="https://www.grab.com/sg/" target="_blank" rel="noopener noreferrer">
+            <Link to="https://www.grab.com/sg/" target="_blank" rel="noopener noreferrer">
               Grab Singapore
-            </OutboundLink>{' '}
+            </Link>{' '}
             as a full-time Software Developer. 
             I build high quality, maintainable and user-friendly digital products.
             I also do AI from experiments to production, with a strong focus on Natural Language Processing (NLP).

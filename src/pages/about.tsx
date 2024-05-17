@@ -4,8 +4,7 @@ import { Helmet } from 'react-helmet';
 import CKAD_Certificate from 'assets/images/ckad_from_cncfsite.png';
 import { Intro } from 'components/intro/Intro';
 import { BlockText } from 'components/block-text/BlockText';
-
-import { OutboundLink } from "gatsby-plugin-google-analytics";
+import { Link } from 'components/link/Link';
 
 const BADGE_STYLE = {
   maxWidth: 'initial',
@@ -28,8 +27,8 @@ export default () => (
 
         <p>
           I am still in the process of building this personal site, but if you are up for a chat, hit me at{' '}
-          <OutboundLink href="mailto:luungoc2005@gmail.com">luungoc2005@gmail.com</OutboundLink>{' '}
-          or{' '}<OutboundLink href="https://twitter.com/luungoc2005">@luungoc2005</OutboundLink>{' '}
+          <Link to="mailto:luungoc2005@gmail.com">luungoc2005@gmail.com</Link>{' '}
+          or{' '}<Link to="https://twitter.com/luungoc2005">@luungoc2005</Link>{' '}
           (although I don't frequent Twitter as much).
         </p>
 

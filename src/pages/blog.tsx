@@ -36,6 +36,7 @@ export const BlogPage = ({ data }: BlogPageProps) => {
   const publishedYears = data.allMarkdownRemark.edges.map((edge) => 
     new Date(edge.node.frontmatter.date).getFullYear()
   )
+
   return (
   <PostsLayout>
 

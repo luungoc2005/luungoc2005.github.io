@@ -3,8 +3,7 @@ import React from 'react';
 import * as s from './AboutColumn.module.scss';
 
 import Avatar from 'assets/images/avatar.png';
-import { Social } from 'components/footer/Footer';
-import { OutboundLink } from "gatsby-plugin-google-analytics";
+import { Link } from "components/link/Link";
 
 import Location from 'assets/svg/location.svg';
 
@@ -39,14 +38,14 @@ export const AboutColumn = ({ social }: AboutColumnProps) => (
         </li>
         {social.map((item) => (
           <li key={item.to}>
-            <OutboundLink alt={item.description} href={item.to} target="_blank" rel="noopener noreferrer">
+            <Link alt={item.description} to={item.to} target="_blank" rel="noopener noreferrer">
               <span className={s.about_col__details__icon}>
                 {item.icon}
               </span>
               <span className={s.about_col__details__text}>
                 {item.description}
               </span>
-            </OutboundLink>
+            </Link>
           </li>
         ))}
       </ul>

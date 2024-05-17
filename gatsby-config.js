@@ -7,14 +7,13 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: "gatsby-plugin-google-tagmanager",
       options: {
-        // The property ID; the tracking code won't be generated without it
-        trackingId: "G-4V9N2KDY2K",
-        // Defines where to place the tracking script - `true` in the head and `false` in the body
-        head: false,
-        respectDNT: true,
-      }
+        id: "G-4V9N2KDY2K",
+        includeInDevelopment: true,
+        defaultDataLayer: { platform: "gatsby" },
+        enableWebVitalsTracking: true,
+      },
     },
     'gatsby-plugin-sass',
     'gatsby-plugin-react-helmet',
